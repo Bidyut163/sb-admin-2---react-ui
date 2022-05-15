@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -6,24 +7,24 @@ const Sidebar = () => {
             className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
             id="accordionSidebar"
         >
-            <a
+            <Link
                 className="sidebar-brand d-flex align-items-center justify-content-center"
-                href="index.html"
+                to="index.html"
             >
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <i class="fa-solid fa-scale-balanced"></i>
                     {/* <i className="fas fa-laugh-wink"></i> */}
+                    <i className="fa-solid fa-lock"></i>
                 </div>
-                <div className="sidebar-brand-text mx-3">REAT, ASSAM</div>
-            </a>
+                <div className="sidebar-brand-text mx-3">ADMIN PANEL</div>
+            </Link>
 
             <hr className="sidebar-divider my-0" />
 
             <li className="nav-item active">
-                <a className="nav-link" href="index.html">
+                <Link className="nav-link" to="/admin/dashboard">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
-                </a>
+                </Link>
             </li>
 
             <hr className="sidebar-divider" />
@@ -31,9 +32,9 @@ const Sidebar = () => {
             <div className="sidebar-heading">Interface</div>
 
             <li className="nav-item">
-                <a
+                <Link
                     className="nav-link collapsed"
-                    href="#"
+                    to="#"
                     data-toggle="collapse"
                     data-target="#collapseTwo"
                     aria-expanded="true"
@@ -41,7 +42,7 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-fw fa-cog"></i>
                     <span>Components</span>
-                </a>
+                </Link>
                 <div
                     id="collapseTwo"
                     className="collapse"
@@ -50,20 +51,20 @@ const Sidebar = () => {
                 >
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header">Custom Components:</h6>
-                        <a className="collapse-item" href="buttons.html">
+                        <Link className="collapse-item" to="/admin/buttons">
                             Buttons
-                        </a>
-                        <a className="collapse-item" href="cards.html">
+                        </Link>
+                        <Link className="collapse-item" to="/admin/cards">
                             Cards
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </li>
 
             <li className="nav-item">
-                <a
+                <Link
                     className="nav-link collapsed"
-                    href="#"
+                    to="#"
                     data-toggle="collapse"
                     data-target="#collapseUtilities"
                     aria-expanded="true"
@@ -71,7 +72,7 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
-                </a>
+                </Link>
                 <div
                     id="collapseUtilities"
                     className="collapse"
@@ -80,30 +81,18 @@ const Sidebar = () => {
                 >
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header">Custom Utilities:</h6>
-                        <a
-                            className="collapse-item"
-                            href="utilities-color.html"
-                        >
+                        <Link className="collapse-item" to="/admin/colors">
                             Colors
-                        </a>
-                        <a
-                            className="collapse-item"
-                            href="utilities-border.html"
-                        >
+                        </Link>
+                        <Link className="collapse-item" to="/admin/borders">
                             Borders
-                        </a>
-                        <a
-                            className="collapse-item"
-                            href="utilities-animation.html"
-                        >
+                        </Link>
+                        <Link className="collapse-item" to="/admin/animations">
                             Animations
-                        </a>
-                        <a
-                            className="collapse-item"
-                            href="utilities-other.html"
-                        >
+                        </Link>
+                        <Link className="collapse-item" to="/admin/others">
                             Other
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </li>
@@ -113,9 +102,9 @@ const Sidebar = () => {
             <div className="sidebar-heading">Addons</div>
 
             <li className="nav-item">
-                <a
+                <Link
                     className="nav-link collapsed"
-                    href="#"
+                    to="#"
                     data-toggle="collapse"
                     data-target="#collapsePages"
                     aria-expanded="true"
@@ -123,7 +112,7 @@ const Sidebar = () => {
                 >
                     <i className="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
-                </a>
+                </Link>
                 <div
                     id="collapsePages"
                     className="collapse"
@@ -132,42 +121,39 @@ const Sidebar = () => {
                 >
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header">Login Screens:</h6>
-                        <a className="collapse-item" href="login.html">
+                        <Link className="collapse-item" to="/login">
                             Login
-                        </a>
-                        <a className="collapse-item" href="register.html">
+                        </Link>
+                        <Link className="collapse-item" to="/register">
                             Register
-                        </a>
-                        <a
-                            className="collapse-item"
-                            href="forgot-password.html"
-                        >
+                        </Link>
+                        <Link className="collapse-item" to="/forgot-password">
                             Forgot Password
-                        </a>
+                        </Link>
                         <div className="collapse-divider"></div>
                         <h6 className="collapse-header">Other Pages:</h6>
-                        <a className="collapse-item" href="404.html">
+                        <Link className="collapse-item" to="404.html">
                             404 Page
-                        </a>
-                        <a className="collapse-item" href="blank.html">
+                        </Link>
+                        <Link className="collapse-item" to="blank.html">
                             Blank Page
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </li>
 
             <li className="nav-item">
-                <a className="nav-link" href="charts.html">
+                <Link className="nav-link" to="/admin/charts">
                     <i className="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span>
-                </a>
+                </Link>
             </li>
 
             <li className="nav-item">
-                <a className="nav-link" href="tables.html">
+                <Link className="nav-link" to="/admin/tables">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Tables</span>
-                </a>
+                </Link>
             </li>
 
             <hr className="sidebar-divider d-none d-md-block" />
@@ -183,19 +169,20 @@ const Sidebar = () => {
                 <img
                     className="sidebar-card-illustration mb-2"
                     src={
-                        require('../assets/admin/img/undraw_rocket.svg').default
+                        require('../../assets/admin/img/undraw_rocket.svg')
+                            .default
                     }
                     alt="..."
                 />
                 <p className="text-center mb-2">
-                    <strong>REAT-</strong> REAL ESTATE APPELLATE TRIBUNAL, Assam
+                    <strong>Admin Panel-</strong> React Admin UI Project
                 </p>
-                {/* <a
+                {/* <Link
                     className="btn btn-success btn-sm"
-                    href="https://startbootstrap.com/theme/sb-admin-pro"
+                    to="https://startbootstrap.com/theme/sb-admin-pro"
                 >
                     Upgrade to Pro!
-                </a> */}
+                </Link> */}
             </div>
         </ul>
     );
